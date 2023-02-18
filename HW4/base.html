@@ -1,0 +1,21 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>{% block title %}{% endblock %} - PIC16B Website</title>
+
+    
+
+<nav>
+  <h1>A Simple Message Bank</h1>
+  <ul>
+    <li><a href="{{ url_for('submit') }}">submit a message</a></li>
+    <li><a href="{{ url_for('view')}}">view messages</a></li>
+  </ul>
+</nav>
+
+
+{% block content %}
+Hello! You can choose to submit a message or view some messages!
+{% endblock %}
+
+
+

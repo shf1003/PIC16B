@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Submit{% endblock %}</h1>
+{% endblock %}
+
+<nav>
+  <h1>A Simple Message Bank</h1>
+  <ul>
+    <li><a href="{{ url_for('submit') }}">submit a message</a></li>
+    <li><a href="{{ url_for('view')}}">view messages</a></li>
+  </ul>
+</nav>
+
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     
+  <form method="post">
+      <label for="message">Enter Your message:</label>
+      <br>
+      <input type="text", name="message" ,id="message">
+      <br>
+      <label for="handle">Enter Your handle:</label>
+      <br>
+      <input type="text", name="handle", id="handle">
+      <br>
+      <input type="submit", value="Submit message">
+
+  </form>
+
+{% endblock %}

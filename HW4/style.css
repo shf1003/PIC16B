@@ -1,0 +1,29 @@
+a {
+          color: #d33682;
+          text-decoration: none;
+          font-size: 16px;
+          display: inline-block;
+          font-family:"Monaco", Monospace;
+        
+        }
+
+h1 {
+          font-size: 18px;
+          color: #d33682;
+          margin-bottom: 30px;
+          text-shadow: 1px 1px #002b36;
+          font-family:"Monaco", Monospace;
+        }
+
+input[type="submit"] {
+          padding: 10px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 2px solid #93a1a1;
+          margin-bottom: 20px;
+          width: 300px;
+          text-align: center;
+          color:#d33682
+        }
+
+     

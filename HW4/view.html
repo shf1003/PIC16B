@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <h1>{% block title %}Some Sessages{% endblock %}</h1>
+{% endblock %}
+
+<nav>
+  <h1>A Simple Message Bank</h1>
+  <ul>
+    <li><a href="{{ url_for('submit') }}">submit a message</a></li>
+    <li><a href="{{ url_for('view')}}">view messages</a></li>
+  </ul>
+</nav>
+
+{% block content %}
+  <h1>Here are some messages:</h1>
+   <br>
+  {% for m in ran %}
+      <dt>{{ m[1] }}</dt>
+      <dd>-- {{ m[0]}}</dd>
+      <br>
+  {% endfor %}
+{% endblock %}
